@@ -37,23 +37,6 @@ body.dark-mode {
     animation: fadeInUp 0.8s ease forwards;
 }
 
-/* Dark/Light Toggle Button */
-.theme-toggle {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: #00bcd4;
-    cursor: pointer;
-    z-index: 1000;
-    transition: color 0.3s;
-}
-
-body.dark-mode .theme-toggle {
-    color: #ffeb3b;
-}
 
 /* Navbar */
 .navbar {
@@ -179,12 +162,6 @@ body.dark-mode .theme-toggle {
     box-shadow: 0 16px 32px rgba(0, 0, 0, 0.25);
 }
 
-body.dark-mode .service-container {
-    background: #1e1e1e;
-    border: 1px solid #333;
-    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.05);
-}
-
 .section-title {
     font-size: 2rem;
     margin-bottom: 1rem;
@@ -250,17 +227,6 @@ body.dark-mode .service-container {
     background: #007c91;
 }
 
-body.dark-mode .contact-section {
-    background: #1c1c1c;
-}
-
-body.dark-mode .contact-form input,
-body.dark-mode .contact-form textarea {
-    background: #2c2c2c;
-    color: #fff;
-    border: 1px solid #444;
-}
-
 /* Footer */
 footer {
     background: #111;
@@ -268,11 +234,6 @@ footer {
     text-align: center;
     padding: 2rem;
     animation: fadeInUp 1.2s ease forwards;
-}
-
-body.dark-mode footer {
-    background: #000;
-    color: #bbb;
 }
 
 /* Responsive */
@@ -334,11 +295,6 @@ body {
     line-height: 1.6;
 }
 
-body.dark-mode {
-    background: #121212;
-    color: #f0f0f0;
-}
-
 /* Service Grid Cards */
 .service-grid {
     display: grid;
@@ -371,16 +327,6 @@ body.dark-mode {
     color: #00bcd4;
 }
 
-body.dark-mode .service-card {
-    background: #1f1f1f;
-    color: #fff;
-    border: 1px solid #333;
-}
-
-body.dark-mode .service-card h3 {
-    color: #00e5ff;
-}
-
 /* Keep previous styles unchanged below */
 
 /* Animations */
@@ -400,23 +346,6 @@ body.dark-mode .service-card h3 {
     animation: fadeInUp 0.8s ease forwards;
 }
 
-/* Dark/Light Toggle Button */
-.theme-toggle {
-    position: fixed;
-    top: 15px;
-    right: 15px;
-    font-size: 1.5rem;
-    background: none;
-    border: none;
-    color: #00bcd4;
-    cursor: pointer;
-    z-index: 1000;
-    transition: color 0.3s;
-}
-
-body.dark-mode .theme-toggle {
-    color: #ffeb3b;
-}
 
 /* Navbar */
 .navbar {
@@ -463,5 +392,3 @@ body.dark-mode .theme-toggle {
     color: #00bcd4;
     text-decoration: underline;
 }
-
-/* Remaining styles unchanged... */
