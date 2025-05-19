@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNow | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-yHcoX+uZLSBdZ8fNSB9sf1rkTf8m5i8q+NYck9I2Xx1vUOrI1lhZmYcBPDMWY3NLHGAF7V7LRZ3KnbkJ4s1kLQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <!-- Dark/Light Mode Toggle Button -->
+    <button id="toggleTheme" class="theme-toggle"><i class="fa fa-moon"></i></button>
+
+    <header>
+        <nav class="navbar">
+            <a href="#home" class="logo">
+                <img src="https://cdn1.iconfinder.com/data/icons/love-150/512/digital-love-heart-valentine-technology-romantic-abstract-1024.png" alt="TechNow Logo" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#customer-section">Customer Services</a></li>
+                <li><a href="#software-section">Software Development</a></li>
+                <li><a href="#cloud-section">Cloud Integration</a></li>
+                <li><a href="#ai-section">AI & ML</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1>Empowering Innovation with <span class="highlight">TechNow</span></h1>
+            <p>Custom software, cloud, and AI-driven solutions built for your success.</p>
+            <a href="#customer-section" class="cta-button">Explore Services</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="service-grid">
+            <a href="customer-services.html" class="service-card">
+                <h3>Customer Services</h3>
+                <p>Engage and support your users with efficiency and care.</p>
+            </a>
+            <a href="software.html" class="service-card">
+                <h3>Software Development</h3>
+                <p>Developing the innovative softwares.</p>
+            </a>
+
+            <a href="cloud-integration.html" class="service-card">
+                <h3>Cloud Integration</h3>
+                <p>Scalable and secure cloud deployment solutions.</p>
+            </a>
+            <a href="ai-ml.html" class="service-card">
+                <h3>AI & ML</h3>
+                <p>Drive innovation with machine learning and automation.</p>
+            </a>
+        </div>
+    </section>
+    <section class="contact-section" id="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form" id="contactForm">
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <p>&copy; 2025 TechNow Solutions. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const toggleBtn = document.getElementById('toggleTheme');
+        const icon = toggleBtn.querySelector('i');
+
+        toggleBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            icon.className = isDark ? 'fas fa-sun' : 'fas fa-moon';
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            icon.className = 'fas fa-sun';
+        }
+    </script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Thank you for contacting us, Our Team will get in touch shortly!");
+            this.reset(); // Clears the form after submission
+        });
+    </script>
+    </body>
+</html>
